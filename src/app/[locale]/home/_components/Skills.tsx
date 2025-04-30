@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import { Code } from "./Code";
 import { Section } from "./Section";
 import { AdonisjsIcon } from "./icons/AdonisjsIcon";

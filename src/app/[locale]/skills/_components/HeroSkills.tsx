@@ -1,6 +1,8 @@
 import { Section } from "@/app/[locale]/home/_components/Section";
+import { useTranslations } from "next-intl";
 
 export const HeroSkills = () => {
+  const t = useTranslations("skills");
   return (
     <Section className="flex max-md:flex-col items-start gap-4">
       <div className="flex-[3] w-full flex flex-col gap-4">
@@ -15,7 +17,7 @@ export const HeroSkills = () => {
           </h1>
         </div>
         <h3 className="text-3xl font-caption text-primary/60 italic mt-4">
-          The tool I use everyday is my brain.
+          {t("skillsContent")}
         </h3>
       </div>
     </Section>
