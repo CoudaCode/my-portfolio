@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "name": "Diarassouba Mamadou",
+    "title": "Ingénieur Logiciel, Développeur Full Stack",
+    "description": {
+      "part1": "J'adore coder avec",
+      "typescript": "TypeScript",
+      "part2": ", je travaille actuellement avec",
+      "javascript": "JavaScript",
+      "part3": ". Je vis à",
+      "location": "Abidjan, Côte d'Ivoire"
+    }
+  },
+  "LocalSelect": {
+    "title": "Sélection de langue",
+    "locale": "{locale, select, en {Anglais} fr {Français} other {Inconnu} }"
+  },
+
+  "skills": {
+    "badge": "Compétences 🛠️",
+    "title": "J'adore travailler sur.....",
+    "react": {
+      "title": "React",
+      "description": "Ma compétence principale est <Code>React</Code>, j'utilise également <Code>Next.js</Code> comme framework frontend tous les jours."
+    },
+    "tailwind": {
+      "title": "Tailwind",
+      "description": "Je crée des applications <u>magnifiques</u> <i>en quelques secondes</i> en utilisant <Code>Tailwind</Code>."
+    },
+    "adonisjs": {
+      "title": "Adonisjs",
+      "description": "J'adore <Code>Adonisjs</Code> pour créer des APIs backend."
+    },
+    "seeMore": "Voir plus de compétences"
+  },
+  "contact": {
+    "badge": "Contactez-moi",
+    "title": "Je serai ravi de travailler avec vous.",
+    "contacts": {
+      "email": {
+        "name": "Diarassouba Mamadou",
+        "description": "Email"
+      },
+      "linkedin": {
+        "name": "Mamadou Diarassouba",
+        "description": "LinkedIn"
+      },
+      "whatsapp": {
+        "name": "Diara Madou 👨🏾‍💻🦾",
+        "description": "Contact Whatsapp"
+      }
+    }
+  },
+  "status": {
+    "Project": "Projets secondaires et amusants. 🚀",
+    "Work": "Travail 💼"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "name": "Diarassouba Mamadou",
+    "title": "Software Engineer, Full Stack Developer",
+    "description": {
+      "part1": "I love to code with",
+      "typescript": "TypeScript",
+      "part2": ", currently working with",
+      "javascript": "JavaScript",
+      "part3": ". Living in",
+      "location": "Abidjan, Ivory Coast"
+    }
+  },
+  "LocalSwitcher": {
+    "title": "Language Switcher",
+    "locale": "{locale, select, en {English} fr {French} es {Spanish} other {Unknown}}",
+    "initials": "{locale, select, en {H} fr {OL} es {AIS} other {?}}"
+  },
+  "skills": {
+    "badge": "Skills 🛠️",
+    "title": "I love working on.....",
+    "react": {
+      "title": "React",
+      "description": "My main skill is <Code>React</Code>, I also <Code>Next.js</Code> as frontend framework everyday."
+    },
+    "tailwind": {
+      "title": "Tailwind",
+      "description": "I create <u>beautiful</u> application <i>in seconds</i> using <Code>Tailwind</Code>."
+    },
+    "adonisjs": {
+      "title": "Adonisjs",
+      "description": "I love <Code>Adonisjs</Code> using it to create backend APIs."
+    },
+    "seeMore": "See more skills"
+  },
+  "contact": {
+    "badge": "Contact Me",
+    "title": "I will be happy to work with you.",
+    "contacts": {
+      "email": {
+        "name": "Diarassouba Mamadou",
+        "description": "50000"
+      },
+      "linkedin": {
+        "name": "Mamadou Diarassouba",
+        "description": "2000"
+      },
+      "whatsapp": {
+        "name": "Diara Madou 👨🏾‍💻🦾",
+        "description": "Whatsapp Contact"
+      }
+    }
+  },
+  "status": {
+    "Project": "Side, Fun Projects. 🚀",
+    "Work": "Work 💼"
+  }
+}
