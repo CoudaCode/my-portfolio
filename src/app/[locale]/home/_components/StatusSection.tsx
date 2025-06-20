@@ -104,7 +104,7 @@ const WorksList: WorkProps[] = [
     image:
       "https://www.divingrace.com/wp-content/uploads/2023/05/divine-grace-logo-new.png",
     date: "02/2025 - present",
-    url: "https://vaguedigitale.ci",
+    url: "#",
   },
   {
     title: "Vague Digitale",
