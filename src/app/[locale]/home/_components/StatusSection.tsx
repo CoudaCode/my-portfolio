@@ -74,12 +74,6 @@ const SideProjectsList = [
     url: "https://presszone.ci",
   },
   {
-    title: "Novasend",
-    description: "Site web de l'application de transfert d'argent Navsend",
-    Logo: Banknote,
-    url: "https://novasend.app",
-  },
-  {
     title: "Jetfy ",
     description:
       "Services api de sms et airtime les applications web et mobiles.",
