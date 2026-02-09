@@ -1,9 +1,9 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { Section } from "./Section";
 
 export const Footer = () => {
-  const footerVariants = {
+  const footerVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
