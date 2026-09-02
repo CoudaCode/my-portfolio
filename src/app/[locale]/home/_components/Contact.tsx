@@ -1,7 +1,7 @@
 "use client";
 import { Badge } from "@/components/ui/badge";
-import { useTranslations } from "next-intl";
 import { motion, type Variants } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { ContactMe } from "./ContactMe";
 import { Section } from "./Section";
 import { WhatsAppIcon } from "./icons/WhatsAppIcon";
@@ -54,23 +54,23 @@ export const Contact = () => {
         <motion.div variants={itemVariants}>
           <Badge variant="outline">{t("badge")}</Badge>
         </motion.div>
-        
-        <motion.h2 
+
+        <motion.h2
           className="pb-2 text-3xl font-semibold tracking-tight first:mt-0"
           variants={itemVariants}
         >
           {t("title")}
         </motion.h2>
-        
-        <motion.div 
+
+        <motion.div
           className="flex max-md:flex-col gap-4 w-full"
           variants={containerVariants}
         >
           <motion.div
             variants={contactCardVariants}
-            whileHover={{ 
+            whileHover={{
               y: -2,
-              transition: { duration: 0.2 }
+              transition: { duration: 0.2 },
             }}
           >
             <ContactMe
@@ -81,12 +81,12 @@ export const Contact = () => {
               image={"https://avatars.githubusercontent.com/u/119653418?v=4"}
             />
           </motion.div>
-          
+
           <motion.div
             variants={contactCardVariants}
-            whileHover={{ 
+            whileHover={{
               y: -2,
-              transition: { duration: 0.2 }
+              transition: { duration: 0.2 },
             }}
           >
             <ContactMe
@@ -97,12 +97,12 @@ export const Contact = () => {
               image={"https://avatars.githubusercontent.com/u/119653418?v=4"}
             />
           </motion.div>
-          
+
           <motion.div
             variants={contactCardVariants}
-            whileHover={{ 
+            whileHover={{
               y: -2,
-              transition: { duration: 0.2 }
+              transition: { duration: 0.2 },
             }}
           >
             <ContactMe

@@ -1,8 +1,8 @@
 "use client";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
+import Link from "next/link";
 import { FacebookIcon } from "./icons/FacebookIcon";
 import { GithubIcon } from "./icons/GithubIcon";
 import { LinkedinIcon } from "./icons/LinkedinIcon";
@@ -45,7 +45,7 @@ export const Header = () => {
   };
 
   return (
-    <motion.header 
+    <motion.header
       className="sticky top-0 py-4 backdrop-blur-sm bg-background/80 z-50"
       variants={containerVariants}
       initial="hidden"
@@ -54,54 +54,55 @@ export const Header = () => {
       <Section className="flex items-baseline">
         <motion.div variants={logoVariants}>
           <Link href="/">
-            <motion.h1 
-              className="text-lg font-bold text-primary hover:underline"
-            >
+            <motion.h1 className="text-lg font-bold text-primary hover:underline">
               couda.dm
             </motion.h1>
           </Link>
         </motion.div>
-        
+
         <div className="flex-1" />
-        
-        <motion.ul 
+
+        <motion.ul
           className="flex items-center gap-2"
           variants={containerVariants}
         >
           <motion.li variants={itemVariants}>
             <Link
-              className={cn(buttonVariants({ variant: "outline" }), "size-6 p-0")}
+              className={cn(
+                buttonVariants({ variant: "outline" }),
+                "size-6 p-0",
+              )}
               href="https://github.com/coudacode"
             >
-              <motion.div
-                whileHover={{ opacity: 0.75 }}
-              >
+              <motion.div whileHover={{ opacity: 0.75 }}>
                 <GithubIcon size={12} className="text-foreground" />
               </motion.div>
             </Link>
           </motion.li>
-          
+
           <motion.li variants={itemVariants}>
             <Link
-              className={cn(buttonVariants({ variant: "outline" }), "size-6 p-0")}
+              className={cn(
+                buttonVariants({ variant: "outline" }),
+                "size-6 p-0",
+              )}
               href="https://www.facebook.com/diara.madou.5205"
             >
-              <motion.div
-                whileHover={{ opacity: 0.75 }}
-              >
+              <motion.div whileHover={{ opacity: 0.75 }}>
                 <FacebookIcon size={12} className="text-foreground" />
               </motion.div>
             </Link>
           </motion.li>
-          
+
           <motion.li variants={itemVariants}>
             <Link
-              className={cn(buttonVariants({ variant: "outline" }), "size-6 p-0")}
+              className={cn(
+                buttonVariants({ variant: "outline" }),
+                "size-6 p-0",
+              )}
               href="https://www.linkedin.com/in/mamadou-diarassouba-558493239/"
             >
-              <motion.div
-                whileHover={{ opacity: 0.75 }}
-              >
+              <motion.div whileHover={{ opacity: 0.75 }}>
                 <LinkedinIcon size={12} className="text-foreground" />
               </motion.div>
             </Link>
