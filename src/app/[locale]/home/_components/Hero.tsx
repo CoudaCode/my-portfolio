@@ -6,6 +6,7 @@ import { Code } from "./Code";
 import { Section } from "./Section";
 import { JavaScriptIcon } from "./icons/JavaScriptIcon";
 import { TypeScriptIcon } from "./icons/TypeScript";
+import { IvoryCoastFlagIcon } from "./icons/IvoryCoastFlagIcon";
 
 export const Hero = () => {
   const t = useTranslations("hero");
@@ -15,44 +16,41 @@ export const Hero = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1,
+        staggerChildren: 0.08,
       },
     },
   };
 
   const textVariants: Variants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 10 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.35,
         ease: "easeOut",
       },
     },
   };
 
   const imageVariants: Variants = {
-    hidden: { opacity: 0, scale: 0.8, rotate: -10 },
+    hidden: { opacity: 0, y: 10 },
     visible: {
       opacity: 1,
-      scale: 1,
-      rotate: 0,
+      y: 0,
       transition: {
-        duration: 0.8,
+        duration: 0.4,
         ease: "easeOut",
       },
     },
   };
 
   const codeVariants: Variants = {
-    hidden: { opacity: 0, scale: 0.9 },
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      scale: 1,
       transition: {
-        duration: 0.4,
+        duration: 0.25,
         ease: "easeOut",
       },
     },
@@ -69,7 +67,6 @@ export const Hero = () => {
         <motion.h2 
           className="font-caption font-bold text-5xl text-primary"
           variants={textVariants}
-          whileHover={{ scale: 1.02 }}
         >
           {t("name")}
         </motion.h2>
@@ -86,14 +83,14 @@ export const Hero = () => {
           variants={textVariants}
         >
           {t("description.part1")}{" "}
-          <motion.span variants={codeVariants} whileHover={{ scale: 1.05 }}>
+          <motion.span variants={codeVariants}>
             <Code className="inline-flex items-center gap-1">
               <TypeScriptIcon size={16} className="inline" />
               {t("description.typescript")}
             </Code>
           </motion.span>
           {t("description.part2")}{" "}
-          <motion.span variants={codeVariants} whileHover={{ scale: 1.05 }}>
+          <motion.span variants={codeVariants}>
             <Code className="inline-flex items-center gap-1">
               <JavaScriptIcon size={16} className="inline" />
               {t("description.javascript")}
@@ -101,13 +98,9 @@ export const Hero = () => {
           </motion.span>
           {t("description.part3")}{" "}
           <Link href={"/"}>
-            <motion.span variants={codeVariants} whileHover={{ scale: 1.05 }}>
+            <motion.span variants={codeVariants}>
               <Code className="inline-flex items-center gap-1">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_C%C3%B4te_d%27Ivoire.svg/langfr-338px-Flag_of_C%C3%B4te_d%27Ivoire.svg.png"
-                  alt="ivory coast"
-                  style={{ width: 16, height: "auto" }}
-                />
+                <IvoryCoastFlagIcon size={16} className="inline shrink-0" />
                 {t("description.location")}
               </Code>
             </motion.span>
@@ -120,11 +113,6 @@ export const Hero = () => {
         variants={imageVariants}
         initial="hidden"
         animate="visible"
-        whileHover={{ 
-          scale: 1.05,
-          rotate: 2,
-          transition: { duration: 0.3 }
-        }}
       >
         <img
           src="https://avatars.githubusercontent.com/u/119653418?v=4"

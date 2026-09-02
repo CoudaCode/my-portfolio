@@ -10,37 +10,35 @@ import { Section } from "./Section";
 
 export const Header = () => {
   const containerVariants: Variants = {
-    hidden: { opacity: 0, y: -20 },
+    hidden: { opacity: 0, y: -8 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.3,
         ease: "easeOut",
-        staggerChildren: 0.1,
+        staggerChildren: 0.05,
       },
     },
   };
 
   const itemVariants: Variants = {
-    hidden: { opacity: 0, scale: 0.8 },
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      scale: 1,
       transition: {
-        duration: 0.4,
+        duration: 0.25,
         ease: "easeOut",
       },
     },
   };
 
   const logoVariants: Variants = {
-    hidden: { opacity: 0, x: -20 },
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      x: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.3,
         ease: "easeOut",
       },
     },
@@ -58,8 +56,6 @@ export const Header = () => {
           <Link href="/">
             <motion.h1 
               className="text-lg font-bold text-primary hover:underline"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
             >
               couda.dm
             </motion.h1>
@@ -78,8 +74,7 @@ export const Header = () => {
               href="https://github.com/coudacode"
             >
               <motion.div
-                whileHover={{ scale: 1.2, rotate: 5 }}
-                whileTap={{ scale: 0.9 }}
+                whileHover={{ opacity: 0.75 }}
               >
                 <GithubIcon size={12} className="text-foreground" />
               </motion.div>
@@ -92,8 +87,7 @@ export const Header = () => {
               href="https://www.facebook.com/diara.madou.5205"
             >
               <motion.div
-                whileHover={{ scale: 1.2, rotate: -5 }}
-                whileTap={{ scale: 0.9 }}
+                whileHover={{ opacity: 0.75 }}
               >
                 <FacebookIcon size={12} className="text-foreground" />
               </motion.div>
@@ -106,8 +100,7 @@ export const Header = () => {
               href="https://www.linkedin.com/in/mamadou-diarassouba-558493239/"
             >
               <motion.div
-                whileHover={{ scale: 1.2, rotate: 5 }}
-                whileTap={{ scale: 0.9 }}
+                whileHover={{ opacity: 0.75 }}
               >
                 <LinkedinIcon size={12} className="text-foreground" />
               </motion.div>

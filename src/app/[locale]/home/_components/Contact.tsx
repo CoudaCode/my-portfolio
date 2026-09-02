@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { motion, type Variants } from "framer-motion";
 import { ContactMe } from "./ContactMe";
 import { Section } from "./Section";
+import { WhatsAppIcon } from "./icons/WhatsAppIcon";
 
 export const Contact = () => {
   const t = useTranslations("contact");
@@ -13,32 +14,30 @@ export const Contact = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.1,
+        staggerChildren: 0.08,
       },
     },
   };
 
   const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 10 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.35,
         ease: "easeOut",
       },
     },
   };
 
   const contactCardVariants: Variants = {
-    hidden: { opacity: 0, scale: 0.8, y: 50 },
+    hidden: { opacity: 0, y: 10 },
     visible: {
       opacity: 1,
-      scale: 1,
       y: 0,
       transition: {
-        duration: 0.7,
+        duration: 0.35,
         ease: "easeOut",
       },
     },
@@ -70,11 +69,9 @@ export const Contact = () => {
           <motion.div
             variants={contactCardVariants}
             whileHover={{ 
-              scale: 1.05,
-              y: -10,
+              y: -2,
               transition: { duration: 0.2 }
             }}
-            whileTap={{ scale: 0.95 }}
           >
             <ContactMe
               name={t("contacts.email.name")}
@@ -88,11 +85,9 @@ export const Contact = () => {
           <motion.div
             variants={contactCardVariants}
             whileHover={{ 
-              scale: 1.05,
-              y: -10,
+              y: -2,
               transition: { duration: 0.2 }
             }}
-            whileTap={{ scale: 0.95 }}
           >
             <ContactMe
               url="https://www.linkedin.com/in/mamadou-diarassouba-558493239/"
@@ -106,17 +101,16 @@ export const Contact = () => {
           <motion.div
             variants={contactCardVariants}
             whileHover={{ 
-              scale: 1.05,
-              y: -10,
+              y: -2,
               transition: { duration: 0.2 }
             }}
-            whileTap={{ scale: 0.95 }}
           >
             <ContactMe
               url="https://wa.me/2250747185291"
               name={t("contacts.whatsapp.name")}
               description={t("contacts.whatsapp.description")}
-              mediumImage="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png"
+              mediumImage=""
+              mediumIcon={<WhatsAppIcon size={16} />}
               image={"https://avatars.githubusercontent.com/u/119653418?v=4"}
             />
           </motion.div>

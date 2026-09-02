@@ -19,17 +19,17 @@
   "skills": {
     "badge": "Compétences 🛠️",
     "title": "J'adore travailler sur.....",
-    "react": {
-      "title": "React",
-      "description": "Ma compétence principale est <Code>React</Code>, j'utilise également <Code>Next.js</Code> comme framework frontend tous les jours."
+    "nextjs": {
+      "title": "Next.js",
+      "description": "J’utilise <Code>Next.js</Code> pour créer des applications web modernes, rapides et évolutives."
     },
-    "tailwind": {
-      "title": "Tailwind",
-      "description": "Je crée des applications <u>magnifiques</u> <i>en quelques secondes</i> en utilisant <Code>Tailwind</Code>."
+    "shadcn": {
+      "title": "shadcn/ui",
+      "description": "J’utilise <Code>shadcn/ui</Code> pour construire des interfaces accessibles, cohérentes et personnalisables."
     },
-    "adonisjs": {
-      "title": "Adonisjs",
-      "description": "J'adore <Code>Adonisjs</Code> pour créer des APIs backend."
+    "nestjs": {
+      "title": "NestJS",
+      "description": "J’utilise <Code>NestJS</Code> pour développer des API backend structurées et maintenables."
     },
     "seeMore": "Voir plus de compétences",
     "skillsContent": "L'outil que j'utilise tous les jours est mon cerveau."
@@ -55,6 +55,23 @@
   "status": {
     "Project": "Projets secondaires et amusants. 🚀 ",
     "Work": "Travail 💼",
-    "Formation": "Formation 🎓"
+    "Formation": "Formation 🎓",
+    "projects": {
+      "imobiznets": {
+        "description": "Plateforme PMS et ERP pour la gestion de biens immobiliers."
+      },
+      "ndaya": {
+        "description": "Plateforme de commerce en ligne dédiée aux créateurs et artisans."
+      },
+      "iacc": {
+        "description": "Site internet dédié aux services d’assurance et de courtage."
+      },
+      "textToSpeech": {
+        "description": "Convertissez facilement du texte en discours grâce à l’intelligence artificielle."
+      },
+      "portfolio": {
+        "description": "Mon site personnel pour présenter mes projets et mes compétences."
+      }
+    }
   }
 }

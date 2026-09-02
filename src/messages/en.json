@@ -19,17 +19,17 @@
   "skills": {
     "badge": "Skills 🛠️",
     "title": "I love working on.....",
-    "react": {
-      "title": "React",
-      "description": "My main skill is <Code>React</Code>, I also <Code>Next.js</Code> as frontend framework everyday."
+    "nextjs": {
+      "title": "Next.js",
+      "description": "I use <Code>Next.js</Code> to build modern, fast, and scalable web applications."
     },
-    "tailwind": {
-      "title": "Tailwind",
-      "description": "I create <u>beautiful</u> application <i>in seconds</i> using <Code>Tailwind</Code>."
+    "shadcn": {
+      "title": "shadcn/ui",
+      "description": "I use <Code>shadcn/ui</Code> to build accessible, consistent, and customizable interfaces."
     },
-    "adonisjs": {
-      "title": "Adonisjs",
-      "description": "I love <Code>Adonisjs</Code> using it to create backend APIs."
+    "nestjs": {
+      "title": "NestJS",
+      "description": "I use <Code>NestJS</Code> to develop structured and maintainable backend APIs."
     },
     "seeMore": "See more skills",
     "skillsContent": "The tool I use everyday is my brain."
@@ -55,6 +55,23 @@
   "status": {
     "Project": "Side, Fun Projects. 🚀",
     "Work": "Work 💼",
-    "Formation": "Education 🎓"
+    "Formation": "Education 🎓",
+    "projects": {
+      "imobiznets": {
+        "description": "A PMS and ERP platform for property management."
+      },
+      "ndaya": {
+        "description": "An online marketplace dedicated to creators and artisans."
+      },
+      "iacc": {
+        "description": "A website dedicated to insurance and brokerage services."
+      },
+      "textToSpeech": {
+        "description": "Easily convert text into speech using artificial intelligence."
+      },
+      "portfolio": {
+        "description": "My personal website showcasing my projects and skills."
+      }
+    }
   }
 }

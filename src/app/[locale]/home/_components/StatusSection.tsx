@@ -1,21 +1,13 @@
 "use client";
 import { Card } from "@/components/ui/card";
-import {
-  Banknote,
-  MessageCircle,
-  Speaker,
-  User,
-  WashingMachine,
-} from "lucide-react";
-import { useTranslations } from "next-intl";
 import { motion, type Variants } from "framer-motion";
-import { ContactMe } from "./ContactMe";
+import { User, WashingMachine } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Section } from "./Section";
 import { SideProjects } from "./SideProjects";
 import { Work, WorkProps } from "./Works";
 
 export const Status = () => {
-  const t = useTranslations("contact");
   const t2 = useTranslations("status");
 
   const containerVariants: Variants = {
@@ -23,36 +15,33 @@ export const Status = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1,
+        staggerChildren: 0.06,
       },
     },
   };
 
   const cardVariants: Variants = {
-    hidden: { 
-      opacity: 0, 
-      y: 50,
-      scale: 0.95,
+    hidden: {
+      opacity: 0,
+      y: 10,
     },
     visible: {
       opacity: 1,
       y: 0,
-      scale: 1,
       transition: {
-        duration: 0.6,
+        duration: 0.35,
         ease: "easeOut",
       },
     },
   };
 
   const itemVariants: Variants = {
-    hidden: { opacity: 0, x: -20 },
+    hidden: { opacity: 0, y: 6 },
     visible: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
-        duration: 0.4,
+        duration: 0.3,
         ease: "easeOut",
       },
     },
@@ -60,7 +49,7 @@ export const Status = () => {
 
   return (
     <Section className="flex max-md:flex-col items-start gap-4">
-      <motion.div 
+      <motion.div
         className="flex-[3] w-full"
         variants={containerVariants}
         initial="hidden"
@@ -68,30 +57,29 @@ export const Status = () => {
       >
         <motion.div variants={cardVariants}>
           <Card className="w-full flex flex-col gap-2 p-4 hover:shadow-lg transition-shadow duration-300">
-            <motion.p 
+            <motion.p
               className="text-lg text-muted-foreground"
               variants={itemVariants}
             >
               {t2("Project")}
             </motion.p>
-            <motion.div 
+            <motion.div
               className="flex flex-col gap-4"
               variants={containerVariants}
             >
-              {SideProjectsList.map((project, index) => (
+              {SideProjectsList.map((project) => (
                 <motion.div
                   key={project.title}
                   variants={itemVariants}
-                  whileHover={{ 
-                    scale: 1.02,
-                    transition: { duration: 0.2 }
-                  }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={{ x: 2 }}
                 >
                   <SideProjects
                     title={project.title}
-                    description={project.description}
+                    description={t2(
+                      `projects.${project.translationKey}.description`,
+                    )}
                     Logo={project.Logo}
+                    logoUrl={project.logoUrl}
                     url={project.url}
                   />
                 </motion.div>
@@ -101,7 +89,7 @@ export const Status = () => {
         </motion.div>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         className="flex-[2] flex flex-col gap-4 h-full w-full"
         variants={containerVariants}
         initial="hidden"
@@ -109,13 +97,13 @@ export const Status = () => {
       >
         <motion.div variants={cardVariants}>
           <Card className="p-4 flex-1 hover:shadow-lg transition-shadow duration-300">
-            <motion.p 
+            <motion.p
               className="text-lg text-muted-foreground"
               variants={itemVariants}
             >
               {t2("Work")}
             </motion.p>
-            <motion.div 
+            <motion.div
               className="flex flex-col gap-4"
               variants={containerVariants}
             >
@@ -123,11 +111,7 @@ export const Status = () => {
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  whileHover={{ 
-                    scale: 1.02,
-                    transition: { duration: 0.2 }
-                  }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={{ x: 2 }}
                 >
                   <Work {...work} />
                 </motion.div>
@@ -138,13 +122,13 @@ export const Status = () => {
 
         <motion.div variants={cardVariants}>
           <Card className="p-4 flex-1 hover:shadow-lg transition-shadow duration-300">
-            <motion.p 
+            <motion.p
               className="text-lg text-muted-foreground"
               variants={itemVariants}
             >
               {t2("Formation")}
             </motion.p>
-            <motion.div 
+            <motion.div
               className="flex flex-col gap-4"
               variants={containerVariants}
             >
@@ -152,11 +136,7 @@ export const Status = () => {
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  whileHover={{ 
-                    scale: 1.02,
-                    transition: { duration: 0.2 }
-                  }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={{ x: 2 }}
                 >
                   <Work {...formation} />
                 </motion.div>
@@ -164,8 +144,6 @@ export const Status = () => {
             </motion.div>
           </Card>
         </motion.div>
-
-     
       </motion.div>
     </Section>
   );
@@ -173,24 +151,38 @@ export const Status = () => {
 
 const SideProjectsList = [
   {
+    title: "Imobiznets",
+    translationKey: "imobiznets",
+    logoUrl: "https://dev.imobiznets.inc/images/assets/Logo/logo.webp",
+    Logo: undefined,
+    url: "https://imobiznets.inc",
+  },
+  {
+    title: "Ndaya",
+    translationKey: "ndaya",
+    logoUrl: "https://ndaya.com/images/logo/logo-dark.webp",
+    Logo: undefined,
+    url: "https://ndaya.com",
+  },
+  {
     title: "Ivoire Assurance Conseil et Courtage",
-    description:
-      "Site internet de l'assurance .",
+    translationKey: "iacc",
     Logo: WashingMachine,
+    logoUrl: undefined,
     url: "https://iacc-website-nextjs.vercel.app/",
   },
   {
     title: "Text To Speech",
-    description:
-      "Convertissez du texte en discours facilement avec notre outil alimenté par l'IA.",
-    Logo: Speaker,
+    translationKey: "textToSpeech",
+    Logo: undefined,
+    logoUrl: "https://text-to-speech-smoky.vercel.app/assets/logo-D4qARBnY.png",
     url: "https://text-to-speech-smoky.vercel.app/",
   },
-   {
+  {
     title: "Portfolio",
-    description:
-      "Mon site personnel pour présenter mes projets et mes compétences.",
+    translationKey: "portfolio",
     Logo: User,
+    logoUrl: undefined,
     url: "https://diara-madou.vercel.app",
   },
 ];
@@ -200,17 +192,15 @@ const WorksList: WorkProps[] = [
     title: "Divine Grace",
     role: "Frontend Developer",
     freelance: true,
-    image:
-       "/images/dvg.webp",
+    image: "/images/dvg.webp",
     date: "02/2025 - 02/2026",
-    url: "#",
+    url: "https://divingrace.com",
   },
   {
     title: "Vague Digitale",
     role: "Fullstack Developer",
     freelance: false,
-    image:
-      "/images/vdg.webp",
+    image: "/images/vdg.webp",
     date: "07/2024 - 05/2025",
     url: "https://vaguedigitale.ci",
   },

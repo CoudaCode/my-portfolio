@@ -152,6 +152,41 @@ const ALLSKILLS = [
     ],
   },
   {
+    title: "DevOps (Notions)",
+    items: [
+      {
+        title: "Docker",
+        description: "Containerisation d'applications et de services.",
+        url: "https://www.docker.com/",
+      },
+      {
+        title: "Docker Compose",
+        description: "Orchestration locale d'applications multi-conteneurs.",
+        url: "https://docs.docker.com/compose/",
+      },
+      {
+        title: "CI/CD",
+        description: "Notions d'intégration et de déploiement continus.",
+        url: "https://about.gitlab.com/topics/ci-cd/",
+      },
+      {
+        title: "GitHub Actions",
+        description: "Automatisation des tests, builds et déploiements.",
+        url: "https://github.com/features/actions",
+      },
+      {
+        title: "Nginx",
+        description: "Configuration de serveur web et de reverse proxy.",
+        url: "https://nginx.org/",
+      },
+      {
+        title: "Vercel",
+        description: "Déploiement et hébergement d'applications web.",
+        url: "https://vercel.com/",
+      },
+    ],
+  },
+  {
     title: "Code",
     items: [
       {
